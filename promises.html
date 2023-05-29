@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Promises</title>
+	<link rel="stylesheet" href="">
+</head>
+<body>
+	<h1>Promises</h1>
+	<ul>
+
+<li>What is promise
+<p>Promises in JavaScript are one of the powerful APIs that help us to do Async operations.<br><br><br>
+A JavaScript Promise object can be:<br>
+
+Pending<br>
+Fulfilled<br>
+Rejected<br>
+</p></li><br><br><br>
+  <li>Why we need it</li>
+  <li>Example</li>
+    <li>what is Finally Keyword</li>
+      <li>Exception handling with promises</li>
+        <li>Promise Channing</li>
+          <li>Error handling with promises</li>
+            <li>Promise.all
+            	<p>Promise.all is actually a promise that takes an array of promises as an input (an iterable). Then it gets resolved when all the promises get resolved or any one of them gets rejected.</p>
+            </li>
+            <li>Promise.allsettled</li>
+             <li>Promise.race</li>
+               	</ul>
+
+               	<div>
+               		<span class="name"></span>
+               	</div>
+</body>
+<script>
+	// let data = new Promise( (resolve,reject) =>{
+	// 	setTimeout(()=>{
+	// 		resolve("code has been executed");
+	// 	},2000)
+	// })
+	// data.then(item=>{
+	// 	console.log(item);
+	// })
+	// console.log("hello");
+
+	// output : 
+	// hello
+	// code has been executed
+
+
+	// 	let data = new Promise( (resolve,reject) =>{
+	// 	setTimeout(()=>{
+	// 		reject("Some Issues");
+	// 	},2000)
+	// })
+
+	// data.then(item=>{
+	// 	console.log(item);
+	// }).catch((err)=>{
+	// 	console.log("catch block",err)
+	// })
+
+ // output : catch block Some Issues
+
+
+
+	// let data = fetch("https://dummy.restapiexample.com/api/v1/employees");
+
+	// data.then(item=>{
+	// 	return item.json();
+	// }).then((result)=>{
+	// 		 console.log(result);
+	// })
+
+		//JavaScript Demo: Promise.all()
+	
+// const promise1 = Promise.resolve(3);
+// const promise2 = 42;
+// const promise3 = new Promise((resolve, reject) => {
+//   setTimeout(resolve, 100, 'foo');
+// });
+
+// Promise.all([promise1, promise2, promise3]).then((values) => {
+//   console.log(values);
+// });
+// output: Array [3, 42, "foo"]
+
+//  const p1 = Promise.resolve(3);
+// const p2 = 1337;
+// const p3 = new Promise((resolve, reject) => {
+//   setTimeout(() => {
+//     resolve("foo");
+//   }, 100);
+// });
+
+// Promise.all([p1, p2, p3]).then((values) => {
+//   console.log(values);
+// });
+   //output: [3, 1337, "foo"]
+
+    //JavaScript Demo: Promise.race()
+// const promise1 = new Promise((resolve, reject) => {
+//   setTimeout(resolve, 500, 'one');
+// });
+
+// const promise2 = new Promise((resolve, reject) => {
+//   setTimeout(resolve, 500, 'two');
+// });
+
+// Promise.race([promise1, promise2]).then((value) => {
+//   console.log(value);
+// });
+ // Both resolve, but promise2 is faster
+// Expected output: "two"
+
+
+
+
+//JavaScript Demo: Promise.allSettled()
+// const promise1 = Promise.resolve(3);
+// const promise2 = new Promise((resolve, reject) => setTimeout(reject, 100, 'foo'));
+// const promises = [promise1, promise2];
+
+// Promise.allSettled(promises).
+//   then((results) => results.forEach((result) => console.log(result.status)));
+
+// Expected output:
+// "fulfilled"
+// "rejected"
+
+
+</script>
+</html>
