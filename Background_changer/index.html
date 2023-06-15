@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Background Color Change</title>
+</head>
+<style type="text/css">
+	*{
+		padding: 0;
+		margin: 0;
+		box-sizing: border-box;
+	}
+	.box{
+		height: 100vh;
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		gap: 10px;
+	}
+	.box-item{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 200px;
+		width: 200px;
+		color: white;
+	}
+	.box-item:nth-child(1) {
+		background-color:red;
+	}
+	.box-item:nth-child(2){
+		background-color:green;
+	}
+	.box-item:nth-child(3){
+		background-color:blue;
+	}
+	.box-item:nth-child(4){
+		background-color:darkblue;
+	}
+	.box-item:nth-child(5){
+		background-color:lightpink;
+	}
+
+</style>
+<body>
+	<div class="box" id="box">
+		<span class="box-item" id="red">RED</span>
+		<span class="box-item" id="green">GREEN</span>
+		<span class="box-item" id="blue">BLUE</span>
+		<span class="box-item" id="darkblue">VOILET</span>
+		<span class="box-item" id="lightpink">PINK </span>
+	</div>
+
+</body>
+<script>
+	const body = document.querySelector('body');
+	const buttons = document.querySelectorAll('.box-item');
+
+	buttons.forEach(function (btn){
+		btn.addEventListener('click', function(e){
+			// console.log(e);
+			// console.log(e.target);
+
+			if(e.target.id === 'red'){
+				body.style.backgroundColor = e.target.id;
+			}
+			if(e.target.id === 'green'){
+				body.style.backgroundColor = e.target.id;
+			}
+			if(e.target.id === 'blue'){
+				body.style.backgroundColor = e.target.id;
+			}
+			if(e.target.id === 'darkblue'){
+				body.style.backgroundColor = e.target.id;
+			}
+			if(e.target.id === 'lightpink'){
+				body.style.backgroundColor = e.target.id;
+			}
+		})
+	})
+
+	
+
+
+
+	
+</script>
+</html>
